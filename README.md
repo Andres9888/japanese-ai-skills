@@ -16,6 +16,8 @@ Scores a Japanese YouTube video (or article) against your Migaku known words and
 - Finds i+1 sentences (only one unknown word) with clickable timestamps, best one marked with ⭐
 - Writes a Japanese monolingual definition plus a short English Migaku-prompt explanation for each word
 - Suggests the best 3-minute section to listen to
+- Picks an easy warm-up (short, 95%+ known, same topic as your main video) to listen to first
+- Picks shadowing / chorusing loops: 30s-2min, one clear speaker, polite steady speech, no music, ~94%+ known
 
 
 ## Setup (video vocab)

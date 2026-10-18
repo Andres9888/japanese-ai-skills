@@ -1,6 +1,6 @@
 ---
 name: "japanese-video-vocab"
-description: "Use when the learner wants vocab from a Japanese YouTube video or podcast: which words to learn, Core 2k/6k/10k or Migaku-star words, top 3 / top 10 words, Japanese (monolingual) definitions, Migaku-prompt English explanations, or timestamps where a word is spoken. Also use to pick Japanese videos or articles that fit the learner's level (about 95-98% known words) and break down their words."
+description: "Use when the learner wants vocab from a Japanese YouTube video or podcast: which words to learn, Core 2k/6k/10k or Migaku-star words, top 3 / top 10 words, Japanese (monolingual) definitions, Migaku-prompt English explanations, or timestamps where a word is spoken. Also use to pick Japanese videos or articles that fit the learner's level (about 95-98% known words) and break down their words. Also use for an easy warm-up pick before main content, and for shadowing/chorusing loop picks."
 ---
 
 # Japanese Video Vocab
@@ -136,3 +136,34 @@ Optional `--export`, `--rank-file`, `--cards`, `--state`, and `--max-rank` match
 Videos are the priority: articles are secondary. Recommend at most 1 article per daily run, only when clearly worthwhile, ideally reinforcing a target from a recommended video; never let article work crowd out video quality. Prioritize genuinely useful New-in-export candidates; existing learning/relearning words remain eligible at lower priority. Identify reused targets across video and article contexts when that helps retention. Give bare URL, title/publisher/date, known/familiar coverage, scored scope, length in Japanese characters if useful, and 1-3 genuine target words with rank/band/status. State once when card absence remains unverified. Built-in audio may be mentioned only when inspected; don't claim it was listened to or language-decoded. Full definitions/paragraph analysis are for requested breakdowns, not every daily pick.
 
 Track article recommendations by canonical URL to prevent repeats. Record reading feedback only from explicit user reports, separately from video watched status. Run both suites after edits: `python3 -B -m unittest discover -s <this-skill-dir>/scripts -p 'test_*.py'`.
+
+
+## 8. Warm-up picks
+
+A warm-up is a short, easy listen before the main (harder) video, to get the ear used to Japanese speech. This ordering is a practical judgment, not a proven optimum.
+
+- **Length:** a 3-5 minute section, or a whole video of about 10-15 minutes at most.
+- **Coverage:** the easiest option available. Aim for 95%+ known in the section used. Run the scorer with `--section-minutes 3` and pick the best section, not the whole-video average.
+- **Native first:** prefer short native videos with on-screen demos (how-tos, vlogs, cooking/coffee/workout) when their best section reaches about 91%+ known. Learner podcasts usually score higher (about 92-96%) and are fine as a labeled warm-up when native options are too hard.
+- **Same topic as the main pick** when possible, so the warm-up primes the topic vocabulary (for example a restaurant video before a restaurant news story).
+- **Human voices only.** Reject synthetic-voice channels (VOICEVOX, ゆっくり, ずんだもん style) for warm-ups.
+- **Optional:** carry one useful "impact" word if the warm-up has a clean i+1 example. Do not turn the warm-up into a mining session.
+- **No same-day repeats.** If a warm-up was already given today, pick a different one.
+
+Output: bare URL with start time, title/channel/date, the section (start-end), known %, why it is easy, and at most one target word.
+
+## 9. Shadowing / chorusing picks
+
+Shadowing = repeating slightly behind the speaker. Chorusing = speaking at the same time as the speaker. Both need a short clean loop the learner can replay many times.
+
+- **Loop length:** about 30 seconds to 2 minutes. Run the scorer with `--section-minutes 1` and choose a window that is at least ~94% known (higher is better). Read the loop's transcript to confirm it is complete sentences.
+- **One clear speaker** for the whole loop. No overlapping talk, interviews, crosstalk, or laugh tracks.
+- **Standard, polite speech** (です/ます) at a steady, moderate pace, unless the learner asks for casual speech.
+- **Clean audio.** No background music or sound effects inside the loop.
+- **Human voices only.** Reject synthetic-voice channels.
+- **Check the content.** High-scoring sections can be ad reads, sponsor segments, or channel intros. Skip those.
+- **Speaker match (optional):** if the learner wants to sound like someone, prefer a speaker of the same gender. For a long-term model voice ("language parent"), prefer an unscripted solo speaker with many hours of content. Scripted instructional clips are fine for short drills but not as a long-term model.
+
+Output: bare URL with the loop start time, loop start-end, known %, the loop transcript, and why it fits. Give at most 1-2 alternates.
+
+Suggested practice (judgment, not a rule): listen to the loop a few times with the transcript, then chorus along with the audio, then shadow without the transcript.

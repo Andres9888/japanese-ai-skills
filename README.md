@@ -1,6 +1,6 @@
 # japanese-ai-skills
 
-AI agent skill I use to learn Japanese with Migaku. Written as `SKILL.md` files for Claude-style agents (Claude Code, Aside, or anything that reads skill folders).
+AI agent skill I use to learn Japanese with Migaku. Written as a `SKILL.md` for Claude-style agents (Claude Code, Aside, or anything that reads skill folders).
 
 Goal: eventually 10k known words, with the most common 2k and 6k words down first, using AI as much as possible.
 

@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "known_words": [],
+  "relearning_words": [],
+  "notes": {
+    "known_words": "Words you have confirmed you know that are newer than your Migaku export.",
+    "relearning_words": "Specific words you explicitly chose to relearn. A generic LEARNING status is not enough."
+  }
+}

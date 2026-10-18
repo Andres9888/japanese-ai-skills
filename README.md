@@ -1,12 +1,12 @@
 # japanese-ai-skills
 
-AI agent skills I use to learn Japanese with Migaku. Written as `SKILL.md` files for Claude-style agents (Claude Code, Aside, or anything that reads skill folders).
+AI agent skill I use to learn Japanese with Migaku. Written as `SKILL.md` files for Claude-style agents (Claude Code, Aside, or anything that reads skill folders).
 
 Goal: eventually 10k known words, with the most common 2k and 6k words down first, using AI as much as possible.
 
-I'm already using these to learn, and I'm still modifying and improving them, so expect changes.
+I'm already using this to learn, and I'm still modifying and improving it, so expect changes.
 
-## Skills
+## Skill
 
 ### `japanese-video-vocab`
 Scores a Japanese YouTube video (or article) against your Migaku known words and picks what to learn next.
@@ -17,8 +17,6 @@ Scores a Japanese YouTube video (or article) against your Migaku known words and
 - Writes a Japanese monolingual definition plus a short English Migaku-prompt explanation for each word
 - Suggests the best 3-minute section to listen to
 
-### `japanese-progress-post`
-Turns a Migaku stats screenshot into a 2-post X thread (Proof, Goal, Method, Invite + "how it works") and stages it in the composer for you to post.
 
 ## Setup (video vocab)
 
@@ -42,6 +40,6 @@ Tests: `python3 -m unittest discover -s skills/japanese-video-vocab/scripts -p '
 
 Coverage numbers are a vocabulary proxy from captions, not a measure of listening comprehension.
 
-## Install as skills
+## Install as a skill
 
-Copy a folder from `skills/` into your agent's skills directory (for Claude Code: `~/.claude/skills/`).
+Copy `skills/japanese-video-vocab` into your agent's skills directory (for Claude Code: `~/.claude/skills/`).
